@@ -90,7 +90,7 @@ const products = [
         category: 'Clasico',
         name: 'Katarina',
         description: 'Heroina asesina veloz.',
-        price: '9.00',
+        price: '9800',
         imageUrl: './product-images/Katarina.webp',
         stock: 10,
     },

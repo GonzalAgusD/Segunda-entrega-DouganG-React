@@ -2,14 +2,18 @@
 import { useState } from 'react';
 import cart from './assets/cart.svg';
 import styles from './CartWidget.module.css';
+import { useCart } from '../../context/CartContext.jsx';
+import { Link } from 'react-router-dom';
 
-export const CartWidget = () => {
-    const [itemCount] = useState(0);
+export function CartWidget() {
+  const { cartQuantity } = useCart(); 
 
-    return (
-        <div className={styles.cartWidgetContainer}>
-            <img src={cart} alt="Shopping cart icon" />
-            <span className={styles.counter}>{itemCount}</span>
-        </div>
-    );
+  return (
+    <div>
+      <Link to="/cart" style={{ textDecoration: 'none', color: 'white' }}>
+        <i className="fas fa-shopping-cart"></i> 
+        <span>{cartQuantity() > 0 ? cartQuantity() : ''}</span> 
+      </Link>
+    </div>
+  );
 }

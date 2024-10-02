@@ -85,3 +85,27 @@ body.light-mode {
     background-color: #121212; 
     color: white;
   }
+/* Estilo para el modo claro (por defecto) */
+body.light-mode {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Estilo para el modo nocturno */
+  body.dark-mode {
+    background-color: #141414;
+    color: white;
+  }
+  
+  /* Ajustes generales */
+  .App {
+    min-height: 100vh; /* Asegura que tome todo el alto de la ventana */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Si quieres que el navbar también se vea afectado */
+  .navbar {
+    background-color: inherit; /* Usará el color de fondo global */
+    color: inherit; /* Usará el color de texto global */
+  }

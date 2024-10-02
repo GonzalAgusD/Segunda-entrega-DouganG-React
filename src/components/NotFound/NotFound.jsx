@@ -4,8 +4,8 @@ import styles from './NotFound.module.css';
 export function NotFound() {
     return (
         <div className={`ui-container ${styles.notFoundContainer}`}>
-            <h1>¡Ups!</h1>
-            <p>Esa página no existe, por favor hacé click <Link to="/">acá</Link> para volver a la página principal.</p>
+            <h1>¡EROR 404!</h1>
+            <p> Por favor hacé click <Link to="/">acá</Link> para volver a la página principal.</p>
         </div>
     );
 }

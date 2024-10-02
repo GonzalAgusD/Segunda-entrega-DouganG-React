@@ -1,23 +1,20 @@
-
-import { NavLink } from "react-router-dom";
-import { CartWidget } from "../CartWidget/CartWidget";
+import { Link } from 'react-router-dom';
+import { CartWidget } from '../CartWidget/CartWidget';
 import styles from './NavBar.module.css';
-const logo = "./tienda.png"; 
 
 export function NavBar() {
-    return (
-        <nav className={styles.navContainer}>
-            <NavLink to="/" className={styles.navbarLogoLink}>
-                <img src={logo} alt="tienda" className={styles.navbarLogo} />
-            </NavLink>
-            <div className={styles.navLinks}>
-                <NavLink to="/" className={({ isActive }) => isActive ? `${styles.navLink} ${styles.active}` : styles.navLink}>Inicio</NavLink>
-                <NavLink to="/category/Fuego" className={({ isActive }) => isActive ? `${styles.navLink} ${styles.active}` : styles.navLink}>Fuego</NavLink>
-                <NavLink to="/category/Premium" className={({ isActive }) => isActive ? `${styles.navLink} ${styles.active}` : styles.navLink}>Premium</NavLink>
-                <NavLink to="/category/Clasico" className={({ isActive }) => isActive ? `${styles.navLink} ${styles.active}` : styles.navLink}>Clasico</NavLink>
-            </div>
-            <CartWidget />
-        </nav>
-    );
+  return (
+    <nav className={styles.navContainer}> 
+      <div>
+        <img src="/tienda.png" alt="Logo" className={styles.navbarLogo} /> 
+      </div>
+      <div className={styles.navLinks}> 
+        <Link to="/" className={styles.navLink}>Inicio</Link>
+        <Link to="/category/Fuego" className={styles.navLink}>Fuego</Link>
+        <Link to="/category/Premium" className={styles.navLink}>Premium</Link>
+        <Link to="/category/Clasico" className={styles.navLink}>Clásico</Link>
+      </div>
+      <CartWidget />  
+    </nav>
+  );
 }
-
