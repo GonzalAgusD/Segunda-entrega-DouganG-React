@@ -8,6 +8,11 @@ export default defineConfig({
       '@': '/src',  // This alias is correct and simplifies imports.
     },
   },
+  build: {
+    rollupOptions: {
+      external: ['firebase', 'firebase/app', 'firebase/firestore'],
+    },
+  },
   css: {
     modules: {
       localsConvention: 'camelCase',  // This is also fine for CSS modules.
